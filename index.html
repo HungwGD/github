@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Món Ăn Truyền Thống Việt Nam</title>
+    <!-- Liên kết duy nhất tới file CSS chung -->
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-    <!-- Liên kết skip to main content giống trong hình -->
+    <!-- Liên kết hỗ trợ truy cập (Accessibility) -->
     <a href="#main-content">Chuyển đến nội dung chính</a>
 
-    <main id="main-content">
-        <!-- Tiêu đề lớn chính của trang -->
+    <!-- Thẻ header (Bước 4) -->
+    <header>
         <h1>Khám Phá Món Ăn Truyền Thống Việt Nam</h1>
+    </header>
 
+    <!-- Thẻ nav (Bước 5) -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+            <li><a href="lien-he.html">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Thẻ main (Bước 6) chứa nội dung chính -->
+    <main id="main-content">
         <!-- Nhóm món ăn thứ nhất -->
         <h2>Phở</h2>
 
         <h3>Phở Bò</h3>
         <ul>
             <li>Giá cả: 40.000đ - 75.000đ</li>
-            <li>Thành phần: Bánh phở, thịt bò (tái, chín, nạm, gầu), nước dùng thanh ngọt từ xương ống.</li>
-            <li>Đặc sản vùng: Hà Nội (Phở Bắc)</li>
+            <li>Thành phần: Bánh phở, thịt bò, nước dùng.</li>
+            <li>Đặc sản vùng: Hà Nội</li>
             <li>
-                <!-- Thay link ảnh phở bò của bạn vào đây nếu có -->
                 <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=300" alt="Phở Bò truyền thống">
             </li>
         </ul>
@@ -32,14 +44,12 @@
         <h3>Phở Gà</h3>
         <ul>
             <li>Giá cả: 35.000đ - 60.000đ</li>
-            <li>Thành phần: Bánh phở, thịt gà xé phay, lá chanh thái sợi, nước dùng thanh trong.</li>
+            <li>Thành phần: Bánh phở, thịt gà xé, lá chanh.</li>
             <li>Đặc sản vùng: Miền Bắc</li>
             <li>
-                <!-- Thay link ảnh phở gà của bạn vào đây nếu có -->
                 <img src="https://images.unsplash.com/photo-1625398407796-82650a8c135f?w=300" alt="Bát Phở Gà thơm ngon">
             </li>
         </ul>
-
 
         <!-- Nhóm món ăn thứ hai -->
         <h2>Bún</h2>
@@ -47,12 +57,18 @@
         <h3>Bún Chả</h3>
         <ul>
             <li>Giá cả: 40.000đ - 60.000đ</li>
-            <li>Thành phần: Bún rối, chả băm, chả miếng nướng than hoa, nước chấm chua ngọt kèm đu đủ xanh.</li>
+            <li>Thành phần: Bún rối, chả nướng, nước chấm.</li>
             <li>Đặc sản vùng: Hà Nội</li>
             <li>
-                <!-- Thay link ảnh bún chả của bạn vào đây nếu có -->
                 <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=300" alt="Mẹt Bún Chả Hà Nội">
             </li>
+        </ul>
+    </main>
+
+    <!-- Thẻ footer (Bước 7) -->
+    <footer>
+        <p>&copy; 2026 Món Ăn Truyền Thống Việt Nam. Bảo lưu mọi quyền.</p>
+    </footer>
 
 </body>
 </html>
