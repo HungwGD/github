@@ -1,0 +1,131 @@
+/* ==========================================================================
+   1. CẤU HÌNH CƠ BẢN VÀ MOBILE FIRST (Mặc định)
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #222222;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: #ffffff;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Chế độ xem Mobile: Lưới 1 cột với khoảng cách 10px */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+
+figure {
+  margin: 0;
+  padding: 15px;
+  background-color: #f4f4f4;
+  border: 2px solid #cccccc;
+  border-radius: 0; /* Mặc định mobile không bo tròn */
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  padding-top: 10px;
+}
+
+/* ==========================================================================
+   2. TABLET VIEW (Kích hoạt từ 772px)
+   ========================================================================== */
+@media (min-width: 772px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Bo tròn hình ảnh/khung ở màn hình máy tính bảng */
+  figure {
+    border-radius: 20px;
+  }
+
+  figure img {
+    border-radius: 12px;
+  }
+
+  /* Phần tử figure cuối cùng chiếm cả 2 cột */
+  figure:last-child {
+    grid-column: span 2;
+  }
+}
+
+/* ==========================================================================
+   3. LARGE SCREEN VIEW (Kích hoạt từ 992px)
+   ========================================================================== */
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Xóa bo tròn border-radius */
+  figure, figure img {
+    border-radius: 0;
+  }
+
+  /* Đặt lại phần tử cuối cùng để không bị ảnh hưởng bởi quy tắc của Tablet */
+  figure:last-child {
+    grid-column: auto;
+  }
+
+  /* Mọi phần tử thứ 3 (figure:nth-child(3n)) sẽ chiếm cả 2 cột */
+  figure:nth-child(3n) {
+    grid-column: span 2;
+  }
+}
+
+/* ==========================================================================
+   4. PREFERS-REDUCED-MOTION (Sở thích giảm chuyển động)
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ==========================================================================
+   5. PREFERS-COLOR-SCHEME: DARK (Chế độ tối & Đảm bảo tương phản WAVE)
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #ffffff;
+  }
+
+  /* Màu nền tối, chữ vàng nhạt (#ffe066) đảm bảo tỷ lệ tương phản WCAG AAA (>7:1) */
+  figure {
+    background-color: #1e1e1e;
+    color: #ffe066; 
+    border: 2px solid #000000;
+  }
+
+  figcaption h3 {
+    color: #ffffff;
+  }
+}
