@@ -1,0 +1,53 @@
+/* Bước 3: Thẻ body - font-family và font-size */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Bước 4: Thẻ header - background-color */
+header {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 20px;
+}
+
+/* Bước 5: Thẻ nav - background-color */
+nav {
+  background-color: #34495e;
+  padding: 10px;
+}
+
+/* Bước 6: Thẻ main - background-color và font-size */
+main {
+  background-color: #f4f4f9;
+  font-size: 1.1rem;
+  padding: 20px;
+}
+
+/* Bước 7: Thẻ footer - background-color */
+footer {
+  background-color: #2c3e50;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Bước 8: Thẻ li - display và width */
+li {
+  display: inline-block;
+  width: 120px;
+}
+
+/* Bước 9: Thẻ h1 - text-align, font-family và color */
+h1 {
+  text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #ffffff;
+}
+
+/* Bước 10: Thẻ p - line-height */
+p {
+  line-height: 1.6;
+}
